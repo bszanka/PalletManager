@@ -21,6 +21,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -77,7 +78,7 @@ public class LineCounter extends Application implements Initializable {
             }
 
         });
-
+        stage.getIcons().add(new Image("harold.png"));
         stage.setTitle("PalletManager");
         stage.setScene(scene);
         stage.show();
@@ -113,7 +114,6 @@ public class LineCounter extends Application implements Initializable {
 
     public static void main(String[] args) throws IOException {
         launch(args);
-        java.net.URL url = ClassLoader.getSystemResource("harold.png");
     }
 
     @Override
