@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="linecounter.FXMLController">
+   <children>
+      <ScrollPane id="pane1" fx:id="pane1" layoutX="71.0" layoutY="57.0" prefHeight="298.0" prefWidth="461.0">
+         <content>
+            <Label id="label1" fx:id="label1" prefHeight="296.0" prefWidth="459.0" text="Label" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
