@@ -82,6 +82,7 @@ public class LineCounter extends Application implements Initializable {
             }
 
         });
+        stage.setResizable(false);
         stage.getIcons().add(new Image("harold.png"));
         stage.setTitle("PalletManager");
         stage.setScene(scene);
