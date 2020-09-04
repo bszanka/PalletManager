@@ -34,6 +34,7 @@ public class LineCounter extends Application implements Initializable {
 
     private final int BG_WIDTH = 595;
     private final int BG_HEIGHT = 355;
+    public int sum = 0;
 
 //<editor-fold defaultstate="collapsed" desc="Setting the scene.">
     @Override
@@ -64,6 +65,7 @@ public class LineCounter extends Application implements Initializable {
         //Adding action on the menu item
         item.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
+                sum = 0;
                 textArea.clear();
                 //Opening a dialog box and put the output in a list
                 List<File> output = fileChooser.showOpenMultipleDialog(stage);
@@ -75,6 +77,8 @@ public class LineCounter extends Application implements Initializable {
                         Logger.getLogger(LineCounter.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
+                textArea.appendText("\u03A3 = " + sum);
+
             }
 
         });
@@ -106,6 +110,7 @@ public class LineCounter extends Application implements Initializable {
         lineCount -= 2;
         String name = file.getName();
         name = name.substring(0, 15);
+        sum += lineCount;
         String res = name + " = " + lineCount + "\n";
         return res;
 
@@ -118,7 +123,6 @@ public class LineCounter extends Application implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
-
 }
