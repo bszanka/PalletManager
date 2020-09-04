@@ -95,8 +95,9 @@ public class LineCounter extends Application implements Initializable {
         }
         
         lineCount -= 2;
-        
-        String res = i + 1 + " = " + lineCount + "\n";
+        String name = file.getName();
+        name = name.substring(0,15);
+        String res = name + " = " + lineCount + "\n";
         return res;
         
     }
